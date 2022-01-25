@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chi tiết món</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="css/all.min.css" type="text/css" rel="stylesheet">
+<link href="css/bootstrap-icons.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+	
+	.navbar-brand{
+		font-family: 'Courgette', cursive;
+		font-size: 2em;
+		color: #62AF27 !important;
+	}	
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">PT Restaurant</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="#">Sản phẩm</a>
+				</li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Dropdown
+					</a>
+					
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+				
+				<li class="nav-item">
+				  <a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+
+			<!--Search-->
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>		<!--End nav-->
+	
+	<style>
+		@media only screen and (max-width: 767px){
+			.img-mon-an{
+				width: 50%;
+			}
+			
+			.thong-tin-chi-tiet{
+				width: 50%;
+			}
+		}
+	</style>	
+	
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col-md-12 mb-3"><h4>Chi tiết món ăn</h4></div>
+			
+			<!-- Ảnh món ăn-->
+			<div class="col-md-3 img-mon-an">
+				<img src="https://media.cooky.vn/recipe/g1/2185/s320x320/recipe2185-prepare-step4-636481519203306343.jpg" alt="com-chien" title="cơm chiên" width="100%" class="img-san-pham">
+			</div>
+			
+			<!--Thông tin món ăn-->
+			<div class="col-md-9 thong-tin-chi-tiet">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<p>Số lượng: <input type="number" maxlength="2" min="0" value="1" style="max-width: 3.3em; text-align: right;"></p>
+				<h5 class="text-danger">1000 VNĐ</h5>
+				<a href="?action=buy&mamon=#" class="btn btn-sm btn-danger mt-3">Đặt hàng</a>
+			</div>
+		</div>
+	</div>
+	
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

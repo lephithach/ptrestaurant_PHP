@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        function Product(props) {
+            return (
+                <React.Fragment>
+                    <img src={props.hinh} alt={props.tenmon} title={props.tenmon} className="img-san-pham" />
+                        <div class="tag">{props.tenloai}</div>
+                </React.Fragment>
+            )
+        }
+
+        function App() {
+           return $.get( "./inc/ajax-get-product.php", function( data ) {
+                // let data = ;
+
+                return (JSON.parse(data)).map((monan, index) => {
+                    return (
+                        <div>
+                            <Product 
+                                hinh = {monan.hinh}
+                                tenmon = {monan.tenmon}
+                                tenloai = {monan.tenloai}
+                            />
+                        </div>
+                    );
+                });
+            });    
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+        // fetch('./inc/ajax-get-product.php')
+        //     .then(response => response.json())
+        //     .then(data => console.log(data));
+    </script>
+</body>
+</html>
